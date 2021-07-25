@@ -8,6 +8,7 @@ import java.awt.event.KeyListener;
 
 public class PingPong extends Applet implements Runnable, KeyListener {
 
+
     final int WIDTH = 700, HEIGHT = 500;
     Thread thread;
     HumanPaddle p1;
@@ -57,9 +58,8 @@ public class PingPong extends Applet implements Runnable, KeyListener {
         paint(g);
     }
 
-
     public void run() {
-        for (; ; ) {
+        for (;;) {
             if(gameStarted) {
                 p1.move();
                 p2.move();
