@@ -1,12 +1,13 @@
 package pingpong;
 
 
+import javax.swing.*;
 import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class PingPong extends Applet implements Runnable, KeyListener {
+public class PingPong extends JFrame implements Runnable, KeyListener {
 
 
     final int WIDTH = 700, HEIGHT = 500;
