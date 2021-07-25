@@ -87,6 +87,22 @@ public class GamePanel extends JPanel implements Runnable{
         if(pingPongBall.intersects(paddle1)) {
             pingPongBall.xVelocity = Math.abs(pingPongBall.xVelocity);
             pingPongBall.xVelocity++;
+            if(pingPongBall.yVelocity > 0)
+                pingPongBall.yVelocity++;
+            else
+                pingPongBall.yVelocity--;
+            pingPongBall.setXDirection(pingPongBall.xVelocity);
+            pingPongBall.setXDirection(pingPongBall.yVelocity);
+        }
+        if(pingPongBall.intersects(paddle2)) {
+            pingPongBall.xVelocity = Math.abs(pingPongBall.xVelocity);
+            pingPongBall.xVelocity++;
+            if(pingPongBall.yVelocity > 0)
+                pingPongBall.yVelocity++;
+            else
+                pingPongBall.yVelocity--;
+            pingPongBall.setXDirection(-pingPongBall.xVelocity);
+            pingPongBall.setXDirection(pingPongBall.yVelocity);
         }
     }
     public void run() {
