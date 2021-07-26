@@ -2,8 +2,6 @@ package pingpong;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.*;
-import javax.swing.*;
 
 public class Paddle extends Rectangle {
 
@@ -54,7 +52,7 @@ public class Paddle extends Rectangle {
                     move();
                 }
             break;
-           
+
             case 2:
                 if (e.getKeyCode() == KeyEvent.VK_UP) {
                     setYDirection(0);
