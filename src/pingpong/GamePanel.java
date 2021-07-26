@@ -62,7 +62,6 @@ public class GamePanel extends JPanel implements Runnable{
         paddle2.draw(g);
         pingPongBall.draw(g);
         score.draw(g);
-
         /*
         if(!gameStarted) {
             g.setColor(Color.blue);
@@ -100,7 +99,7 @@ public class GamePanel extends JPanel implements Runnable{
         if(pingPongBall.intersects(paddle2)) {
             pingPongBall.xVelocity = Math.abs(pingPongBall.xVelocity);
             pingPongBall.xVelocity++; //optional for more difficulty
-            if(pingPongBall.yVelocity>0)
+            if(pingPongBall.yVelocity > 0)
                 pingPongBall.yVelocity++; //optional for more difficulty
             else
                 pingPongBall.yVelocity--;
