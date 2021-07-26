@@ -30,21 +30,22 @@ public class Paddle extends Rectangle {
                 break;
             //TODO change for ai
             case 2:
-                if (e.getKeyCode() == KeyEvent.VK_UP) {
-                    setYDirection(-speed);
-                    move();
-                }
-                if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-                    setYDirection(speed);
-                    move();
-                }
-                break;
+            if (e.getKeyCode() == KeyEvent.VK_UP) {
+                setYDirection(-speed);
+                move();
+            }
+            if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+                setYDirection(speed);
+                move();
+            }
+            break;
         }
     }
 
     public void keyReleased(KeyEvent e) {
         switch (id) {
             case 1:
+
                 if (e.getKeyCode() == KeyEvent.VK_W) {
                     setYDirection(0);
                     move();
@@ -53,7 +54,7 @@ public class Paddle extends Rectangle {
                     setYDirection(0);
                     move();
                 }
-                break;
+            break;
             //TODO change for ai
             case 2:
                 if (e.getKeyCode() == KeyEvent.VK_UP) {
