@@ -24,11 +24,13 @@ public class GamePanel extends JPanel implements Runnable{
     PingPongBall pingPongBall;
     Score score;
     boolean gameStarted;
+    Graphics gfx;
 
 
     GamePanel() {
         newPaddles();
         newPingPongBall();
+        gameStarted = false;
         score = new Score(GAME_WIDTH, GAME_HEIGHT);
         this.setFocusable(true);
         this.addKeyListener(new AL());
@@ -60,6 +62,15 @@ public class GamePanel extends JPanel implements Runnable{
         paddle2.draw(g);
         pingPongBall.draw(g);
         score.draw(g);
+
+        /*
+        if(!gameStarted) {
+            g.setColor(Color.blue);
+            g.drawString("Welcome to Ping Pong made by Yusuf Arfan Ismail", 340, 100);
+            g.drawString("Press the enter key to start", 310, 130);
+        }
+
+         */
         Toolkit.getDefaultToolkit().sync(); // I forgot to add this line of code in the video, it helps with the animation
     }
     public void move() {
