@@ -28,7 +28,6 @@ public class Paddle extends Rectangle {
                     move();
                 }
                 break;
-            //TODO change for ai
             case 2:
             if (e.getKeyCode() == KeyEvent.VK_UP) {
                 setYDirection(-speed);
@@ -55,7 +54,7 @@ public class Paddle extends Rectangle {
                     move();
                 }
             break;
-            //TODO change for ai
+           
             case 2:
                 if (e.getKeyCode() == KeyEvent.VK_UP) {
                     setYDirection(0);
