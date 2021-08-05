@@ -88,13 +88,13 @@ public class GamePanel extends JPanel implements Runnable{
         //bounces ping pong ball of paddles
         if(pingPongBall.intersects(paddle1)) {
             pingPongBall.xVelocity = Math.abs(pingPongBall.xVelocity);
-            pingPongBall.xVelocity++;
-            if(pingPongBall.yVelocity > 0)
-                pingPongBall.yVelocity++;
+            pingPongBall.xVelocity++; //optional for more difficulty
+            if(pingPongBall.yVelocity>0)
+                pingPongBall.yVelocity++; //optional for more difficulty
             else
                 pingPongBall.yVelocity--;
-            pingPongBall.setXDirection(pingPongBall.xVelocity);
-            pingPongBall.setXDirection(pingPongBall.yVelocity);
+            pingPongBall.setXDirection(-pingPongBall.xVelocity);
+            pingPongBall.setYDirection(pingPongBall.yVelocity);
         }
         if(pingPongBall.intersects(paddle2)) {
             pingPongBall.xVelocity = Math.abs(pingPongBall.xVelocity);
